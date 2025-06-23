@@ -405,10 +405,11 @@ section{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 0 36px;
-    perspective: 2500px;
+    padding: 0 0px;
+    perspective: 2000px;
     margin: 0 50px;
     background-color: transparent;
+    border: #ffffff00;
   }
   
   .cover-image {
@@ -418,7 +419,7 @@ section{
   }
   
   .wrapper {
-    transition: all 0.5s;
+    transition: all 0.3s;
     position: absolute;
     width: 100%;
     z-index: -1;

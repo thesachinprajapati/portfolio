@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sachin's Portfolio</title>
-    <link rel="icon" type="image/png" href="portfolio log.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -24,7 +23,7 @@
                 <a class="navbar-brand ms-3" href="#">
 
                     <!-- Show text on larger screens and logo on smaller screens -->
-                    <span class=" d-lg-inline">SACHIN PRAJAPATI
+                    <span class="d-none d-lg-inline">SACHIN PRAJAPATI
                     </span>
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -45,25 +44,34 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav ms-auto">
                         <li class="active me-3">
-                            <button href="#">HOME</button>
+                            <button href="#">Loading</button>
                         </li>
                         <li class="me-3">
-                            <button href="#">PROJECTS</button>
+                            <button href="#">Loading</button>
                         </li>
                         <li class="me-3">
-                            <button href="#">ABOUT</button>
+                            <button href="#">Loading</button>
                         </li>
                         <li class="me-3">
-                            <button href="#">CONTACT</button>
+                            <button href="#">Loading</button>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
     </header>
-
-
+    
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+          <h3>Chat with Me</h3>
+        </div>
+        <div class="chatbot-box">
+          <div id="chat-box"></div>
+          <input type="text" id="user-input" placeholder="Type a message...">
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+      
     <section class="top">
         <div class="container">
             <div class="row">
@@ -251,29 +259,20 @@
     <section>
         <div class="container profile">
             <div class="row">
-                <div class="col-12 col-md-5 img">
-                    <div class="card ">
-                        <div class="wrapper">
-                            <img src="picofme.png" class="cover-image" />
+                <div class="col-12 col-md-6 img">
+                        <div class="card">
+                            <div class="wrapper">
+                                <img src="picofme.png"
+                                    class="cover-image" />
+                            </div>
+                            <img src=""
+                                class="title" />
+                            <img src="PSX_20220802_203139.png"
+                                class="character" />
                         </div>
-                        <img src="" class="title" />
-                        <img src="PSX_20220802_203139.png" class="character" />
-                    </div>
                 </div>
-                <div class="col-12 col-md-7 text">
-                    <div>
-                        <h3>ABOUT</h3>
-                        <p>Hello! I'm Sachin Prajapati, a passionate and self-motivated Web Developer currently pursuing
-                            a diploma in Computer Science and Engineering. I enjoy creating clean, responsive, and
-                            interactive websites using HTML, CSS, JavaScript, and Bootstrap.
-
-                            I take pride in building user-friendly web interfaces and always aim to write efficient and
-                            well-structured code. With a strong foundation in front-end technologies, I am constantly
-                            exploring new tools and techniques to enhance my development skills.
-
-                            Whether it's designing a personal portfolio or working on creative web ideas, I believe in
-                            learning by building and staying updated with the latest trends in web development.</p>
-                    </div>
+                <div class="col-12 col-md-6 text">
+                    <div></div>
                 </div>
             </div>
         </div>
@@ -876,7 +875,7 @@
         };
 
     </script>
-
+    
 </body>
 
 </html>

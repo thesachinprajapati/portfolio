@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <header class="bg-dark text-white py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+            <div class="container-fluid menu">
+                <!-- Add margin to the navbar-brand -->
+                <a class="navbar-brand ms-3" href="#">
+
+                    <!-- Show text on larger screens and logo on smaller screens -->
+                    <span class="d-none d-lg-inline">SACHIN PRAJAPATI
+                    </span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <label class="hamburger">
+                        <input type="checkbox" />
+                        <svg viewBox="0 0 32 32">
+                            <path
+                                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+                                class="line line-top-bottom"></path>
+                            <path d="M7 16 27 16" class="line"></path>
+                        </svg>
+                    </label>
+
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="active me-3">
+                            <button href="#">Loading</button>
+                        </li>
+                        <li class="me-3">
+                            <button href="#">Loading</button>
+                        </li>
+                        <li class="me-3">
+                            <button href="#">Loading</button>
+                        </li>
+                        <li class="me-3">
+                            <button href="#">Loading</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+          <h3>Chat with Me</h3>
+        </div>
+        <div class="chatbot-box">
+          <div id="chat-box"></div>
+          <input type="text" id="user-input" placeholder="Type a message...">
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+      
+    <section class="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 text-center top-left">
+                    <div>
+                        <div class="text-loader">
+                            <svg width="100%" height="150" viewBox="0 0 800 150" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <text x="50%" y="50%" text-anchor="middle" dy=".35em" class="animate-text">
+                                    Coming soon
+                                </text>
+                            </svg>
+                        </div>
+
+                        <style>
+                            .text-loader svg {
+                                max-width: 100%;
+                            }
+
+                            text {
+                                font-size: 100px;
+                                /* Default font size for larger screens */
+                                font-family: 'Arial', sans-serif;
+                                fill: none;
+                                stroke: url(#gradient);
+                                /* Apply gradient to the stroke */
+                                stroke-width: 2px;
+                                stroke-dasharray: 0 1000;
+                                stroke-dashoffset: 1000;
+                                animation: draw 4s ease-in-out infinite, glowing 2s linear infinite;
+                                white-space: nowrap;
+                                /* Ensures the text stays on one line */
+                            }
+
+                            /* Gradient definition for glowing text */
+                            svg text {
+                                filter: drop-shadow(0 0 6px #00FFFF);
+                            }
+
+                            @keyframes draw {
+                                0% {
+                                    stroke-dasharray: 0 1000;
+                                    stroke-dashoffset: 1000;
+                                }
+
+                                50% {
+                                    stroke-dasharray: 500 500;
+                                    stroke-dashoffset: 0;
+                                }
+
+                                100% {
+                                    stroke-dasharray: 1000 0;
+                                    stroke-dashoffset: -1000;
+                                }
+                            }
+
+                            @keyframes glowing {
+                                0% {
+                                    stroke: #ff0026;
+                                }
+
+                                5% {
+                                    stroke: #ff0080;
+                                }
+
+                                10% {
+                                    stroke: #ff00bf;
+                                }
+
+                                15% {
+                                    stroke: #e906fe;
+                                }
+
+                                20% {
+                                    stroke: #bb00ff;
+                                }
+
+                                25% {
+                                    stroke: #8800ff;
+                                }
+
+                                30% {
+                                    stroke: #0d00ff;
+                                }
+
+                                35% {
+                                    stroke: #0084ff;
+                                }
+
+                                40% {
+                                    stroke: #00fbff;
+                                }
+
+                                45% {
+                                    stroke: #00ffb7;
+                                }
+
+                                50% {
+                                    stroke: #00ff84;
+                                }
+
+                                55% {
+                                    stroke: #00e5b5;
+                                }
+
+                                60% {
+                                    stroke: #00ff2f;
+                                }
+
+                                65% {
+                                    stroke: #6eff07;
+                                }
+
+                                70% {
+                                    stroke: #57ff02;
+                                }
+
+                                75% {
+                                    stroke: #f7ff02;
+                                }
+
+                                80% {
+                                    stroke: #ffb300;
+                                }
+
+                                85% {
+                                    stroke: #ff0000;
+                                }
+
+                                90% {
+                                    stroke: #ffb300;
+                                }
+
+                                95% {
+                                    stroke: #d9ff00;
+                                }
+
+                                100% {
+                                    stroke: #0080ff;
+                                }
+                            }
+
+
+                            /* Responsive adjustments for tablets */
+                            @media (max-width: 768px) {
+                                text {
+                                    font-size: 70px;
+                                    /* Adjust font size for tablets */
+                                    stroke-width: 1.8px;
+                                }
+                            }
+
+                            /* Responsive adjustments for phones */
+                            @media (max-width: 480px) {
+                                text {
+                                    font-size: 60px;
+                                    /* Adjust font size for phones */
+                                    stroke-width: 1.5px;
+                                    white-space: nowrap;
+                                    /* Prevent line break on small screens */
+                                }
+                            }
+                        </style>
+
+
+                        <p>Something amazing is on its way! </p>
+                        <style>
+                            p {
+                                color: white;
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 top-right">
+                    <img src="9742057.png" alt="">
+                    <div class="cir1">
+                    </div>
+                    <div class="cir2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container profile">
+            <div class="row">
+                <div class="col-12 col-md-6 img">
+                        <div class="card">
+                            <div class="wrapper">
+                                <img src="picofme.png"
+                                    class="cover-image" />
+                            </div>
+                            <img src=""
+                                class="title" />
+                            <img src="PSX_20220802_203139.png"
+                                class="character" />
+                        </div>
+                </div>
+                <div class="col-12 col-md-6 text">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+
+                    <div class="flower">
+                        <div class="flower-pp">
+                            <div class="flower_l"></div>
+                            <div class="f">
+                                <div class="leaf leaf--1"></div>
+                                <div class="leaf leaf--2"></div>
+                                <div class="leaf leaf--3"></div>
+                                <div class="leaf leaf--4"></div>
+                                <div class="leaf leaf--5"></div>
+                                <div class="leaf leaf--6"></div>
+                                <div class="leaf leaf--7"></div>
+                                <div class="leaf leaf--8 flower__fall-down--yellow"></div>
+                            </div>
+                        </div>
+
+                        <div class="flower-pp flower-pp--2">
+                            <div class="flower_l"></div>
+                            <div class="f">
+                                <div class="leaf leaf--1"></div>
+                                <div class="leaf leaf--2"></div>
+                                <div class="leaf leaf--3"></div>
+                                <div class="leaf leaf--4"></div>
+                                <div class="leaf leaf--5"></div>
+                                <div class="leaf leaf--6"></div>
+                                <div class="leaf leaf--7"></div>
+                                <div class="leaf leaf--8 flower__fall-down--pink"></div>
+                            </div>
+                        </div>
+
+                        <div class="flower-pp flower-pp--3">
+                            <div class="flower_l"></div>
+                            <div class="f">
+                                <div class="leaf leaf--1"></div>
+                                <div class="leaf leaf--2"></div>
+                                <div class="leaf leaf--3"></div>
+                                <div class="leaf leaf--4"></div>
+                                <div class="leaf leaf--5"></div>
+                                <div class="leaf leaf--6"></div>
+                                <div class="leaf leaf--7"></div>
+                                <div class="leaf leaf--8 flower__fall-down--purple"></div>
+                            </div>
+                        </div>
+                        <div class="flower__glass"></div>
+                    </div>
+
+                    <style>
+                        *,
+                        *::after,
+                        *::before {
+                            padding: 0;
+                            margin: 0;
+                            box-sizing: border-box;
+                        }
+
+                        :root {
+                            --color-bg: linear-gradient(to top, #010329, #000005);
+                            --color-glass: linear-gradient(to left, #142544, #1a9092);
+                            --color-water: linear-gradient(to left, #142544, #1b6d6e);
+                        }
+
+
+                        .flower {
+                            position: relative;
+                            position: fixed;
+                            /* Stays at bottom-right even when scrolling */
+                            right: 2%;
+                            /* Adjust position from the right */
+                            bottom: 2%;
+                            /* Adjust position from the bottom */
+                            transform: scale(0.5);
+                            /* Resize flower to 50% of its original size */
+                            z-index: 10;
+
+                        }
+
+                        @media (max-width: 768px) {
+
+                            /* Target devices with a width of 768px or smaller */
+                            .flower {
+                                right: 1vw;
+                                /* Tighter margin for smaller screens */
+                                bottom: 1vh;
+                                /* Adjust to ensure proper positioning */
+                                transform: scale(0.4);
+                                /* Further reduce size for phones */
+                            }
+                        }
+
+                        .flower__glass {
+                            width: 20vmin;
+                            height: 30vmin;
+                            background-image: var(--color-glass);
+                            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+                            opacity: .8;
+                            position: relative;
+                        }
+
+                        .flower__glass::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-color: #182843;
+                            width: 100%;
+                            height: 2vmin;
+                        }
+
+                        .flower__glass::before {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-image: var(--color-water);
+                            width: 100%;
+                            height: 15vmin;
+                        }
+
+                        .flower-pp {
+                            position: absolute;
+                            left: 45%;
+                            bottom: 2vmin;
+                        }
+
+                        .flower-pp--2 {
+                            left: 50%;
+                            bottom: 5%;
+                            transform-origin: 10% left;
+                            transform: rotate(20deg);
+                        }
+
+                        .flower-pp--3 {
+                            left: 30%;
+                            bottom: 5%;
+                            transform-origin: 10% left;
+                            transform: rotate(-10deg);
+                        }
+
+                        .flower-pp--3 .flower_l {
+                            height: 45vmin;
+                            position: relative;
+                        }
+
+                        .flower-pp--3 .flower_l::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 6vmin;
+                            height: 6vmin;
+                            transform: translate(-69%, -30%) rotate(-5deg);
+                            border-radius: 10vmin 10vmin 0 0;
+                            border: 2vmin solid #104d4e;
+                            border-bottom: transparent;
+                            border-left: transparent;
+                        }
+
+                        .flower-pp--3 .flower_l::before {
+                            content: '';
+                            position: absolute;
+                            left: -40%;
+                            top: -1%;
+                            width: 6vmin;
+                            height: 2vmin;
+                            transform-origin: right;
+                            transform: translate(-100%, -80%) rotate(-20deg);
+                            background-color: #104d4e;
+                            border-radius: 2vmin;
+                        }
+
+                        .flower-pp--3 .flower_l {
+                            background-image: linear-gradient(to top, #142544, #104d4e);
+                        }
+
+
+                        .flower-pp--2 .flower_l {
+                            height: 45vmin;
+                        }
+
+                        .flower-pp--2 .f {
+                            transform: translateX(-50%) rotate(20deg);
+                        }
+
+                        .flower-pp--3 .f {
+                            transform: translate(-350%, -50%) rotate(-120deg);
+                        }
+
+                        .flower-pp--2 .leaf:not(:first-child) {
+                            width: 3.8vmin;
+                            height: 10vmin;
+                            background-image: linear-gradient(to bottom, #ff43b6, #c22887, #1a233a 99%);
+                        }
+
+                        .flower-pp--3 .leaf:not(:first-child) {
+                            width: 3.8vmin;
+                            height: 10vmin;
+                            background-image: linear-gradient(to bottom, #ad2be0, #712291, #1a233a 99%);
+                        }
+
+                        .flower-pp--3 .leaf--1 {
+                            width: 8vmin;
+                            height: 10vmin;
+                            bottom: 2vmin;
+                            background-color: #ad2be0;
+                        }
+
+                        .flower-pp--2 .leaf--1 {
+                            width: 8vmin;
+                            height: 10vmin;
+                            bottom: 2vmin;
+                            background-color: #de118b;
+                        }
+
+                        .flower-pp--2 .f .leaf--8 {
+                            width: 10vmin;
+                            height: 9vmin;
+                            bottom: 3vmin;
+                            left: -30%;
+                            transform: rotate(-50deg);
+                            background-image: linear-gradient(to left bottom, #ff43b6, #4d1337);
+                            ;
+                        }
+
+                        .flower-pp--3 .f .leaf--8 {
+                            width: 10vmin;
+                            height: 9vmin;
+                            left: -10% !important;
+                            background-image: linear-gradient(to left bottom, #ad2be0, #712291);
+                            ;
+                        }
+
+                        .flower_l {
+                            width: 2vmin;
+                            height: 56vmin;
+                            background-image: linear-gradient(to left top, #82fdff 20%, #142544, #104d4e);
+                            border-radius: 4vmin;
+                        }
+
+                        .f {
+                            position: absolute;
+                            top: 1vmin;
+                            left: 50%;
+                            transform: translateX(-50%) rotate(-10deg);
+                            width: 2vmin;
+                            height: 2vmin;
+                        }
+
+
+                        .leaf {
+                            position: absolute;
+                            left: 50%;
+                            bottom: 2vmin;
+                            transform: translateX(-50%);
+                            width: 5vmin;
+                            height: 14vmin;
+                            background-image: linear-gradient(to bottom, #ffa085, #fa7373, #1a233a 99%);
+
+                            clip-path: ellipse(50% 50% at 50% 50%);
+                            transform-origin: center bottom;
+                            animation: open-flower 2s 1s backwards;
+                        }
+
+                        .leaf--1 {
+                            width: 10vmin;
+                            height: 12vmin;
+                            bottom: 3vmin;
+                            border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+                            background-color: #e24f5f;
+                            background-image: none;
+                            animation: open-flowe--middle 1.4s 1s backwards;
+                        }
+
+                        .leaf--2 {
+                            transform: translateX(-50%) rotate(-30deg);
+                        }
+
+                        .leaf--3 {
+                            transform: translateX(-50%) rotate(-50deg);
+                        }
+
+                        .leaf--4 {
+                            transform: translateX(-50%) rotate(-70deg);
+                        }
+
+                        .leaf--5 {
+                            transform: translateX(-50%) rotate(30deg);
+                        }
+
+                        .leaf--6 {
+                            transform: translateX(-50%) rotate(50deg);
+                        }
+
+                        .leaf--7 {
+                            transform: translateX(-50%) rotate(70deg);
+                        }
+
+                        .leaf--8 {
+                            width: 13vmin;
+                            height: 11vmin;
+                            bottom: 6vmin;
+                            left: -30%;
+                            border-radius: none;
+                            clip-path: none;
+                            border-radius: 10vmin 2vmin 10vmin 2vmin;
+                            transform: rotate(-55deg);
+                            background-image: linear-gradient(to left bottom, #ffa085, #eb8b8b, #492f2f 98%);
+                        }
+
+                        .flower__fall-down--yellow {
+                            animation: flower-fall-down-yellow 5s 1.2s linear infinite;
+                        }
+
+                        .flower__fall-down--pink {
+                            animation: flower-fall-down-pink 4s 1.2s linear infinite;
+                        }
+
+                        .flower__fall-down--purple {
+                            bottom: 4vmin;
+                            animation: flower-fall-down-purple 3s 1.2s linear infinite, flower-falling 6s 7.2s linear infinite;
+                        }
+
+
+                        @keyframes open-flower {
+                            0% {
+                                transform: translateX(-50%) rotate(0);
+                            }
+                        }
+
+                        @keyframes open-flowe--middle {
+                            0% {
+                                opacity: 0;
+                                transform: translateX(-50%) scale(0);
+                            }
+                        }
+
+                        @keyframes flower-fall-down-pink {
+
+                            0% {
+                                transform: rotate(-55deg);
+                            }
+
+                            50% {
+                                transform: rotateX(-100deg);
+                            }
+
+                            100% {
+                                transform: translate(2vmin, 28vmin);
+                            }
+
+                        }
+
+                        @keyframes flower-fall-down-yellow {
+
+                            0% {
+                                transform: rotate(-55deg);
+                            }
+
+                            50% {
+                                bottom: 3vmin;
+                                transform: rotateX(-100deg);
+                            }
+
+                            100% {
+                                transform: translate(2vmin, 70vmin) rotate(150deg);
+                            }
+
+                        }
+
+                        @keyframes flower-fall-down-purple {
+
+                            0% {
+                                transform: rotate(-50deg);
+                            }
+
+                            25% {
+                                bottom: 1vmin;
+                                transform: rotateX(-100deg);
+                                perspective: 0px;
+                            }
+
+                            50% {
+                                perspective: 0px;
+                                transform: translate(-30vmin, 2vmin) rotate(90deg);
+                            }
+
+                            75% {
+                                perspective: 0px;
+                                transform: translate(-34vmin, -2vmin);
+                            }
+
+                            100% {
+                                transform-origin: center;
+                                transform: translate(-34vmin, -2vmin) rotateY(-80deg) rotateX(35deg);
+                            }
+
+                        }
+
+                        @keyframes flower-falling {
+
+                            0%,
+                            100% {
+                                transform-origin: center;
+                                transform: translate(-34vmin, -2vmin) rotateY(-80deg) rotateX(35deg);
+                            }
+
+                            25% {
+                                transform-origin: center;
+                                transform: translate(-34.4vmin, -2vmin) rotateY(-84deg) rotateX(35deg);
+                            }
+
+                            50% {
+                                transform-origin: center;
+                                transform: translate(-32vmin, -4.2vmin) rotateY(-80deg) rotateX(35deg);
+                            }
+
+                            75% {
+                                transform-origin: center;
+                                transform: translate(-36vmin, 1.1vmin) rotateY(-80deg) rotateX(35deg);
+                            }
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="java.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </script>
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js">
+    </script>
+
+    <script>
+        const navElement = document.querySelector("nav");
+
+        const activeElement = document.createElement("div");
+        activeElement.classList.add("active-element");
+
+        const getOffsetLeft = (element) => {
+            const elementRect = element.getBoundingClientRect();
+
+            return (
+                elementRect.left -
+                navElement.getBoundingClientRect().left +
+                (elementRect.width - activeElement.offsetWidth) / 2
+            );
+        };
+
+        navElement.appendChild(activeElement);
+
+        const activeButton = navElement.querySelector("ul li.active button");
+
+        document.fonts.ready.then(() => {
+            gsap.set(activeElement, {
+                x: getOffsetLeft(activeButton),
+            });
+            gsap.to(activeElement, {
+                "--active-element-show": "1",
+                duration: 0.2,
+            });
+        });
+
+        navElement.querySelectorAll("ul li button").forEach((button, index) => {
+            button.addEventListener("click", () => {
+                const active = navElement.querySelector("ul li.active");
+                const oldIndex = [...active.parentElement.children].indexOf(active);
+
+                if (
+                    index === oldIndex ||
+                    navElement.classList.contains("before") ||
+                    navElement.classList.contains("after")
+                ) {
+                    return;
+                }
+
+                const x = getOffsetLeft(button);
+                const direction = index > oldIndex ? "after" : "before";
+                const spacing = Math.abs(x - getOffsetLeft(active));
+
+                navElement.classList.add(direction);
+                active.classList.remove("active");
+                button.parentElement.classList.add("active");
+
+                gsap.set(activeElement, {
+                    rotateY: direction === "before" ? "180deg" : "0deg",
+                });
+
+                gsap.to(activeElement, {
+                    keyframes: [
+                        {
+                            "--active-element-width": `${spacing > navElement.offsetWidth - 60
+                                ? navElement.offsetWidth - 60
+                                : spacing
+                                }px`,
+                            duration: 0.3,
+                            ease: "none",
+                            onStart: () => {
+                                createSVG(activeElement);
+
+                                gsap.to(activeElement, {
+                                    "--active-element-opacity": 1,
+                                    duration: 0.1,
+                                });
+                            },
+                        },
+                        {
+                            "--active-element-scale-x": "0",
+                            "--active-element-scale-y": ".25",
+                            "--active-element-width": "0px",
+                            duration: 0.3,
+                            onStart: () => {
+                                gsap.to(activeElement, {
+                                    "--active-element-mask-position": "40%",
+                                    duration: 0.5,
+                                });
+                                gsap.to(activeElement, {
+                                    "--active-element-opacity": 0,
+                                    delay: 0.45,
+                                    duration: 0.25,
+                                });
+                            },
+                            onComplete: () => {
+                                activeElement.innerHTML = "";
+                                navElement.classList.remove("before", "after");
+                                activeElement.removeAttribute("style");
+                                gsap.set(activeElement, {
+                                    x: getOffsetLeft(button),
+                                    "--active-element-show": "1",
+                                });
+                            },
+                        },
+                    ],
+                });
+
+                gsap.to(activeElement, {
+                    x,
+                    "--active-element-strike-x": "-50%",
+                    duration: 0.6,
+                    ease: "none",
+                });
+            });
+        });
+
+        const createSVG = (element) => {
+            element.innerHTML = `
+    <svg viewBox="0 0 116 5" preserveAspectRatio="none" class="beam">
+      <path d="M0.5 2.5L113 0.534929C114.099 0.515738 115 1.40113 115 2.5C115 3.59887 114.099 4.48426 113 4.46507L0.5 2.5Z" fill="url(#gradient-beam)"/>
+      <defs>
+        <linearGradient id="gradient-beam" x1="2" y1="2.5" x2="115" y2="2.5" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#6AAAFF"/>
+          <stop offset="1" stop-color="white"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="strike">
+      <svg viewBox="0 0 114 12" preserveAspectRatio="none">
+        <g fill="none" stroke="white" stroke-width="0.75" stroke-linecap="round">
+          <path d="M113.5 6.5L109.068 8.9621C109.023 8.98721 108.974 9.00516 108.923 9.01531L106.889 9.42219C106.661 9.46776 106.432 9.35034 106.336 9.1388L104.045 4.0986C104.015 4.03362 104 3.96307 104 3.8917V2.12268C104 1.6898 103.487 1.46145 103.166 1.75103L99.2887 5.24019C99.1188 5.39305 98.867 5.41132 98.6768 5.28457L95.0699 2.87996C94.7881 2.69205 94.4049 2.83291 94.3118 3.15862L92.6148 9.09827C92.5483 9.33084 92.3249 9.48249 92.0843 9.45843L87.7087 9.02087C87.5752 9.00752 87.4419 9.04839 87.3389 9.13428L84.9485 11.1263C84.7128 11.3227 84.3575 11.2625 84.1996 10.9994L81.7602 6.93359C81.617 6.69492 81.3064 6.61913 81.0694 6.76501L75.3165 10.3052C75.1286 10.4209 74.8871 10.3997 74.7223 10.2531L70.6678 6.64917C70.5611 6.55429 70.5 6.41829 70.5 6.27547V1.20711C70.5 1.0745 70.4473 0.947322 70.3536 0.853553L70.2185 0.718508C70.0846 0.584592 69.8865 0.537831 69.7068 0.59772L69.2675 0.744166C68.9149 0.861705 68.8092 1.30924 69.0721 1.57206L69.605 2.10499C69.8157 2.31571 69.7965 2.66281 69.5638 2.84897L67.5 4.5L65.2715 6.28282C65.1083 6.41338 64.8811 6.42866 64.7019 6.32113L60.3621 3.71725C60.153 3.59179 59.8839 3.63546 59.7252 3.8206L57.0401 6.95327C57.0135 6.9843 56.9908 7.01849 56.9725 7.05505L55.2533 10.4934C55.1188 10.7624 54.779 10.8526 54.5287 10.6858L50.7686 8.17907C50.6051 8.07006 50.3929 8.06694 50.2263 8.17109L46.7094 10.3691C46.5774 10.4516 46.4145 10.468 46.2688 10.4133L42.6586 9.05949C42.5558 9.02091 42.4684 8.94951 42.4102 8.85633L40.1248 5.1997C40.0458 5.07323 40.0273 4.91808 40.0745 4.77659L40.6374 3.08777C40.7755 2.67359 40.3536 2.29381 39.9562 2.47447L35.5 4.5L32.2657 5.88613C32.1013 5.95658 31.9118 5.93386 31.7687 5.82656L30.1904 4.64279C30.0699 4.55245 29.9152 4.5212 29.7691 4.55772L26.2009 5.44977C26.0723 5.48193 25.9617 5.56388 25.8934 5.67759L23.1949 10.1752C23.0796 10.3673 22.8507 10.4593 22.6346 10.4003L17.6887 9.05148C17.5674 9.01838 17.463 8.94076 17.3963 8.83409L15.3331 5.53299C15.1627 5.26032 14.7829 5.21707 14.5556 5.44443L12.1464 7.85355C12.0527 7.94732 11.9255 8 11.7929 8H8.15139C8.05268 8 7.95617 7.97078 7.87404 7.91603L3.74143 5.16095C3.59214 5.06142 3.40096 5.04952 3.24047 5.12976L0.5 6.5" />
+          <path d="M113.5 6.5L109.068 8.9621C109.023 8.98721 108.974 9.00516 108.923 9.01531L106.889 9.42219C106.661 9.46776 106.432 9.35034 106.336 9.1388L104.045 4.0986C104.015 4.03362 104 3.96307 104 3.8917V2.12268C104 1.6898 103.487 1.46145 103.166 1.75103L99.2887 5.24019C99.1188 5.39305 98.867 5.41132 98.6768 5.28457L95.0699 2.87996C94.7881 2.69205 94.4049 2.83291 94.3118 3.15862L92.6148 9.09827C92.5483 9.33084 92.3249 9.48249 92.0843 9.45843L87.7087 9.02087C87.5752 9.00752 87.4419 9.04839 87.3389 9.13428L84.9485 11.1263C84.7128 11.3227 84.3575 11.2625 84.1996 10.9994L81.7602 6.93359C81.617 6.69492 81.3064 6.61913 81.0694 6.76501L75.3165 10.3052C75.1286 10.4209 74.8871 10.3997 74.7223 10.2531L70.6678 6.64917C70.5611 6.55429 70.5 6.41829 70.5 6.27547V1.20711C70.5 1.0745 70.4473 0.947322 70.3536 0.853553L70.2185 0.718508C70.0846 0.584592 69.8865 0.537831 69.7068 0.59772L69.2675 0.744166C68.9149 0.861705 68.8092 1.30924 69.0721 1.57206L69.605 2.10499C69.8157 2.31571 69.7965 2.66281 69.5638 2.84897L67.5 4.5L65.2715 6.28282C65.1083 6.41338 64.8811 6.42866 64.7019 6.32113L60.3621 3.71725C60.153 3.59179 59.8839 3.63546 59.7252 3.8206L57.0401 6.95327C57.0135 6.9843 56.9908 7.01849 56.9725 7.05505L55.2533 10.4934C55.1188 10.7624 54.779 10.8526 54.5287 10.6858L50.7686 8.17907C50.6051 8.07006 50.3929 8.06694 50.2263 8.17109L46.7094 10.3691C46.5774 10.4516 46.4145 10.468 46.2688 10.4133L42.6586 9.05949C42.5558 9.02091 42.4684 8.94951 42.4102 8.85633L40.1248 5.1997C40.0458 5.07323 40.0273 4.91808 40.0745 4.77659L40.6374 3.08777C40.7755 2.67359 40.3536 2.29381 39.9562 2.47447L35.5 4.5L32.2657 5.88613C32.1013 5.95658 31.9118 5.93386 31.7687 5.82656L30.1904 4.64279C30.0699 4.55245 29.9152 4.5212 29.7691 4.55772L26.2009 5.44977C26.0723 5.48193 25.9617 5.56388 25.8934 5.67759L23.1949 10.1752C23.0796 10.3673 22.8507 10.4593 22.6346 10.4003L17.6887 9.05148C17.5674 9.01838 17.463 8.94076 17.3963 8.83409L15.3331 5.53299C15.1627 5.26032 14.7829 5.21707 14.5556 5.44443L12.1464 7.85355C12.0527 7.94732 11.9255 8 11.7929 8H8.15139C8.05268 8 7.95617 7.97078 7.87404 7.91603L3.74143 5.16095C3.59214 5.06142 3.40096 5.04952 3.24047 5.12976L0.5 6.5" />
+          <path d="M113.5 6.5L109.068 8.9621C109.023 8.98721 108.974 9.00516 108.923 9.01531L106.889 9.42219C106.661 9.46776 106.432 9.35034 106.336 9.1388L104.045 4.0986C104.015 4.03362 104 3.96307 104 3.8917V2.12268C104 1.6898 103.487 1.46145 103.166 1.75103L99.2887 5.24019C99.1188 5.39305 98.867 5.41132 98.6768 5.28457L95.0699 2.87996C94.7881 2.69205 94.4049 2.83291 94.3118 3.15862L92.6148 9.09827C92.5483 9.33084 92.3249 9.48249 92.0843 9.45843L87.7087 9.02087C87.5752 9.00752 87.4419 9.04839 87.3389 9.13428L84.9485 11.1263C84.7128 11.3227 84.3575 11.2625 84.1996 10.9994L81.7602 6.93359C81.617 6.69492 81.3064 6.61913 81.0694 6.76501L75.3165 10.3052C75.1286 10.4209 74.8871 10.3997 74.7223 10.2531L70.6678 6.64917C70.5611 6.55429 70.5 6.41829 70.5 6.27547V1.20711C70.5 1.0745 70.4473 0.947322 70.3536 0.853553L70.2185 0.718508C70.0846 0.584592 69.8865 0.537831 69.7068 0.59772L69.2675 0.744166C68.9149 0.861705 68.8092 1.30924 69.0721 1.57206L69.605 2.10499C69.8157 2.31571 69.7965 2.66281 69.5638 2.84897L67.5 4.5L65.2715 6.28282C65.1083 6.41338 64.8811 6.42866 64.7019 6.32113L60.3621 3.71725C60.153 3.59179 59.8839 3.63546 59.7252 3.8206L57.0401 6.95327C57.0135 6.9843 56.9908 7.01849 56.9725 7.05505L55.2533 10.4934C55.1188 10.7624 54.779 10.8526 54.5287 10.6858L50.7686 8.17907C50.6051 8.07006 50.3929 8.06694 50.2263 8.17109L46.7094 10.3691C46.5774 10.4516 46.4145 10.468 46.2688 10.4133L42.6586 9.05949C42.5558 9.02091 42.4684 8.94951 42.4102 8.85633L40.1248 5.1997C40.0458 5.07323 40.0273 4.91808 40.0745 4.77659L40.6374 3.08777C40.7755 2.67359 40.3536 2.29381 39.9562 2.47447L35.5 4.5L32.2657 5.88613C32.1013 5.95658 31.9118 5.93386 31.7687 5.82656L30.1904 4.64279C30.0699 4.55245 29.9152 4.5212 29.7691 4.55772L26.2009 5.44977C26.0723 5.48193 25.9617 5.56388 25.8934 5.67759L23.1949 10.1752C23.0796 10.3673 22.8507 10.4593 22.6346 10.4003L17.6887 9.05148C17.5674 9.01838 17.463 8.94076 17.3963 8.83409L15.3331 5.53299C15.1627 5.26032 14.7829 5.21707 14.5556 5.44443L12.1464 7.85355C12.0527 7.94732 11.9255 8 11.7929 8H8.15139C8.05268 8 7.95617 7.97078 7.87404 7.91603L3.74143 5.16095C3.59214 5.06142 3.40096 5.04952 3.24047 5.12976L0.5 6.5" />
+        </g>
+      </svg>
+      <svg viewBox="0 0 114 12" preserveAspectRatio="none">
+        <g fill="none" stroke="white" stroke-width="0.75" stroke-linecap="round">
+          <path d="M113.5 6.5L109.068 8.9621C109.023 8.98721 108.974 9.00516 108.923 9.01531L106.889 9.42219C106.661 9.46776 106.432 9.35034 106.336 9.1388L104.045 4.0986C104.015 4.03362 104 3.96307 104 3.8917V2.12268C104 1.6898 103.487 1.46145 103.166 1.75103L99.2887 5.24019C99.1188 5.39305 98.867 5.41132 98.6768 5.28457L95.0699 2.87996C94.7881 2.69205 94.4049 2.83291 94.3118 3.15862L92.6148 9.09827C92.5483 9.33084 92.3249 9.48249 92.0843 9.45843L87.7087 9.02087C87.5752 9.00752 87.4419 9.04839 87.3389 9.13428L84.9485 11.1263C84.7128 11.3227 84.3575 11.2625 84.1996 10.9994L81.7602 6.93359C81.617 6.69492 81.3064 6.61913 81.0694 6.76501L75.3165 10.3052C75.1286 10.4209 74.8871 10.3997 74.7223 10.2531L70.6678 6.64917C70.5611 6.55429 70.5 6.41829 70.5 6.27547V1.20711C70.5 1.0745 70.4473 0.947322 70.3536 0.853553L70.2185 0.718508C70.0846 0.584592 69.8865 0.537831 69.7068 0.59772L69.2675 0.744166C68.9149 0.861705 68.8092 1.30924 69.0721 1.57206L69.605 2.10499C69.8157 2.31571 69.7965 2.66281 69.5638 2.84897L67.5 4.5L65.2715 6.28282C65.1083 6.41338 64.8811 6.42866 64.7019 6.32113L60.3621 3.71725C60.153 3.59179 59.8839 3.63546 59.7252 3.8206L57.0401 6.95327C57.0135 6.9843 56.9908 7.01849 56.9725 7.05505L55.2533 10.4934C55.1188 10.7624 54.779 10.8526 54.5287 10.6858L50.7686 8.17907C50.6051 8.07006 50.3929 8.06694 50.2263 8.17109L46.7094 10.3691C46.5774 10.4516 46.4145 10.468 46.2688 10.4133L42.6586 9.05949C42.5558 9.02091 42.4684 8.94951 42.4102 8.85633L40.1248 5.1997C40.0458 5.07323 40.0273 4.91808 40.0745 4.77659L40.6374 3.08777C40.7755 2.67359 40.3536 2.29381 39.9562 2.47447L35.5 4.5L32.2657 5.88613C32.1013 5.95658 31.9118 5.93386 31.7687 5.82656L30.1904 4.64279C30.0699 4.55245 29.9152 4.5212 29.7691 4.55772L26.2009 5.44977C26.0723 5.48193 25.9617 5.56388 25.8934 5.67759L23.1949 10.1752C23.0796 10.3673 22.8507 10.4593 22.6346 10.4003L17.6887 9.05148C17.5674 9.01838 17.463 8.94076 17.3963 8.83409L15.3331 5.53299C15.1627 5.26032 14.7829 5.21707 14.5556 5.44443L12.1464 7.85355C12.0527 7.94732 11.9255 8 11.7929 8H8.15139C8.05268 8 7.95617 7.97078 7.87404 7.91603L3.74143 5.16095C3.59214 5.06142 3.40096 5.04952 3.24047 5.12976L0.5 6.5" />
+          <path d="M113.5 6.5L109.068 8.9621C109.023 8.98721 108.974 9.00516 108.923 9.01531L106.889 9.42219C106.661 9.46776 106.432 9.35034 106.336 9.1388L104.045 4.0986C104.015 4.03362 104 3.96307 104 3.8917V2.12268C104 1.6898 103.487 1.46145 103.166 1.75103L99.2887 5.24019C99.1188 5.39305 98.867 5.41132 98.6768 5.28457L95.0699 2.87996C94.7881 2.69205 94.4049 2.83291 94.3118 3.15862L92.6148 9.09827C92.5483 9.33084 92.3249 9.48249 92.0843 9.45843L87.7087 9.02087C87.5752 9.00752 87.4419 9.04839 87.3389 9.13428L84.9485 11.1263C84.7128 11.3227 84.3575 11.2625 84.1996 10.9994L81.7602 6.93359C81.617 6.69492 81.3064 6.61913 81.0694 6.76501L75.3165 10.3052C75.1286 10.4209 74.8871 10.3997 74.7223 10.2531L70.6678 6.64917C70.5611 6.55429 70.5 6.41829 70.5 6.27547V1.20711C70.5 1.0745 70.4473 0.947322 70.3536 0.853553L70.2185 0.718508C70.0846 0.584592 69.8865 0.537831 69.7068 0.59772L69.2675 0.744166C68.9149 0.861705 68.8092 1.30924 69.0721 1.57206L69.605 2.10499C69.8157 2.31571 69.7965 2.66281 69.5638 2.84897L67.5 4.5L65.2715 6.28282C65.1083 6.41338 64.8811 6.42866 64.7019 6.32113L60.3621 3.71725C60.153 3.59179 59.8839 3.63546 59.7252 3.8206L57.0401 6.95327C57.0135 6.9843 56.9908 7.01849 56.9725 7.05505L55.2533 10.4934C55.1188 10.7624 54.779 10.8526 54.5287 10.6858L50.7686 8.17907C50.6051 8.07006 50.3929 8.06694 50.2263 8.17109L46.7094 10.3691C46.5774 10.4516 46.4145 10.468 46.2688 10.4133L42.6586 9.05949C42.5558 9.02091 42.4684 8.94951 42.4102 8.85633L40.1248 5.1997C40.0458 5.07323 40.0273 4.91808 40.0745 4.77659L40.6374 3.08777C40.7755 2.67359 40.3536 2.29381 39.9562 2.47447L35.5 4.5L32.2657 5.88613C32.1013 5.95658 31.9118 5.93386 31.7687 5.82656L30.1904 4.64279C30.0699 4.55245 29.9152 4.5212 29.7691 4.55772L26.2009 5.44977C26.0723 5.48193 25.9617 5.56388 25.8934 5.67759L23.1949 10.1752C23.0796 10.3673 22.8507 10.4593 22.6346 10.4003L17.6887 9.05148C17.5674 9.01838 17.463 8.94076 17.3963 8.83409L15.3331 5.53299C15.1627 5.26032 14.7829 5.21707 14.5556 5.44443L12.1464 7.85355C12.0527 7.94732 11.9255 8 11.7929 8H8.15139C8.05268 8 7.95617 7.97078 7.87404 7.91603L3.74143 5.16095C3.59214 5.06142 3.40096 5.04952 3.24047 5.12976L0.5 6.5" />
+          <path d="M113.5 6.5L109.068 8.9621C109.023 8.98721 108.974 9.00516 108.923 9.01531L106.889 9.42219C106.661 9.46776 106.432 9.35034 106.336 9.1388L104.045 4.0986C104.015 4.03362 104 3.96307 104 3.8917V2.12268C104 1.6898 103.487 1.46145 103.166 1.75103L99.2887 5.24019C99.1188 5.39305 98.867 5.41132 98.6768 5.28457L95.0699 2.87996C94.7881 2.69205 94.4049 2.83291 94.3118 3.15862L92.6148 9.09827C92.5483 9.33084 92.3249 9.48249 92.0843 9.45843L87.7087 9.02087C87.5752 9.00752 87.4419 9.04839 87.3389 9.13428L84.9485 11.1263C84.7128 11.3227 84.3575 11.2625 84.1996 10.9994L81.7602 6.93359C81.617 6.69492 81.3064 6.61913 81.0694 6.76501L75.3165 10.3052C75.1286 10.4209 74.8871 10.3997 74.7223 10.2531L70.6678 6.64917C70.5611 6.55429 70.5 6.41829 70.5 6.27547V1.20711C70.5 1.0745 70.4473 0.947322 70.3536 0.853553L70.2185 0.718508C70.0846 0.584592 69.8865 0.537831 69.7068 0.59772L69.2675 0.744166C68.9149 0.861705 68.8092 1.30924 69.0721 1.57206L69.605 2.10499C69.8157 2.31571 69.7965 2.66281 69.5638 2.84897L67.5 4.5L65.2715 6.28282C65.1083 6.41338 64.8811 6.42866 64.7019 6.32113L60.3621 3.71725C60.153 3.59179 59.8839 3.63546 59.7252 3.8206L57.0401 6.95327C57.0135 6.9843 56.9908 7.01849 56.9725 7.05505L55.2533 10.4934C55.1188 10.7624 54.779 10.8526 54.5287 10.6858L50.7686 8.17907C50.6051 8.07006 50.3929 8.06694 50.2263 8.17109L46.7094 10.3691C46.5774 10.4516 46.4145 10.468 46.2688 10.4133L42.6586 9.05949C42.5558 9.02091 42.4684 8.94951 42.4102 8.85633L40.1248 5.1997C40.0458 5.07323 40.0273 4.91808 40.0745 4.77659L40.6374 3.08777C40.7755 2.67359 40.3536 2.29381 39.9562 2.47447L35.5 4.5L32.2657 5.88613C32.1013 5.95658 31.9118 5.93386 31.7687 5.82656L30.1904 4.64279C30.0699 4.55245 29.9152 4.5212 29.7691 4.55772L26.2009 5.44977C26.0723 5.48193 25.9617 5.56388 25.8934 5.67759L23.1949 10.1752C23.0796 10.3673 22.8507 10.4593 22.6346 10.4003L17.6887 9.05148C17.5674 9.01838 17.463 8.94076 17.3963 8.83409L15.3331 5.53299C15.1627 5.26032 14.7829 5.21707 14.5556 5.44443L12.1464 7.85355C12.0527 7.94732 11.9255 8 11.7929 8H8.15139C8.05268 8 7.95617 7.97078 7.87404 7.91603L3.74143 5.16095C3.59214 5.06142 3.40096 5.04952 3.24047 5.12976L0.5 6.5" />
+        </g>
+      </svg>
+    </div>
+  `;
+        };
+
+    </script>
+    
+</body>
+
+</html>
